@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard BCRP - Expectativas Macroeconómicas</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f7;
+            color: #222222;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #5F0F1A, #8B1E2D);
+            color: white;
+            padding: 35px 50px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 34px;
+            letter-spacing: 0.5px;
+        }
+
+        .header p {
+            margin-top: 8px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1250px;
+            margin: 30px auto;
+            padding: 0 25px;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .kpi-card {
+            background: white;
+            padding: 22px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            border-top: 5px solid #8B1E2D;
+        }
+
+        .kpi-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            color: #666;
+            letter-spacing: 0.8px;
+            margin-bottom: 10px;
+        }
+
+        .kpi-value {
+            font-size: 30px;
+            font-weight: bold;
+            color: #5F0F1A;
+        }
+
+        .kpi-date {
+            font-size: 12px;
+            color: #777;
+            margin-top: 8px;
+        }
+
+        .section {
+            background: white;
+            padding: 24px;
+            margin-bottom: 25px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: #5F0F1A;
+            font-size: 22px;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .data-table th {
+            background: #5F0F1A;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .data-table td {
+            padding: 9px 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        .footer {
+            text-align: center;
+            color: #777;
+            font-size: 12px;
+            padding: 25px;
+        }
+
+        @media (max-width: 900px) {
+            .kpi-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .kpi-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Dashboard de Expectativas Macroeconómicas</h1>
+        <p>Banco Central de Reserva del Perú - Prototipo con base simulada mensual</p>
+    </div>
+
+    <div class="container">
+
+        <div class="kpi-grid">
+
+            <div class="kpi-card">
+                <div class="kpi-title">Expectativa inflación 12m</div>
+                <div class="kpi-value">1.83%</div>
+                <div class="kpi-date">Último dato: 2026-05</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-title">Expectativa PBI</div>
+                <div class="kpi-value">4.34%</div>
+                <div class="kpi-date">Último dato: 2026-05</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-title">Tipo de cambio esperado</div>
+                <div class="kpi-value">S/ 3.43</div>
+                <div class="kpi-date">Último dato: 2026-05</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-title">Tasa de referencia</div>
+                <div class="kpi-value">6.57%</div>
+                <div class="kpi-date">Último dato: 2026-05</div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2>Inflación y expectativas</h2>
+            <p class="description">
+                Este gráfico compara la inflación observada de los últimos 12 meses con la expectativa de inflación a 12 meses.
+            </p>
+            <div>                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.5.0.min.js" integrity="sha256-fHbNLP+GlIXN+efbQec78UkemUz3NJp7UmfGxC1tNxs=" crossorigin="anonymous"></script>                <div id="490f51c4-1f6a-4c2a-9394-68a0423b6c76" class="plotly-graph-div" style="height:420px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("490f51c4-1f6a-4c2a-9394-68a0423b6c76")) {                    Plotly.newPlot(                        "490f51c4-1f6a-4c2a-9394-68a0423b6c76",                        [{"line":{"width":3},"mode":"lines","name":"Inflaci\u00f3n 12m","x":["2017-01-01T00:00:00.000000","2017-02-01T00:00:00.000000","2017-03-01T00:00:00.000000","2017-04-01T00:00:00.000000","2017-05-01T00:00:00.000000","2017-06-01T00:00:00.000000","2017-07-01T00:00:00.000000","2017-08-01T00:00:00.000000","2017-09-01T00:00:00.000000","2017-10-01T00:00:00.000000","2017-11-01T00:00:00.000000","2017-12-01T00:00:00.000000","2018-01-01T00:00:00.000000","2018-02-01T00:00:00.000000","2018-03-01T00:00:00.000000","2018-04-01T00:00:00.000000","2018-05-01T00:00:00.000000","2018-06-01T00:00:00.000000","2018-07-01T00:00:00.000000","2018-08-01T00:00:00.000000","2018-09-01T00:00:00.000000","2018-10-01T00:00:00.000000","2018-11-01T00:00:00.000000","2018-12-01T00:00:00.000000","2019-01-01T00:00:00.000000","2019-02-01T00:00:00.000000","2019-03-01T00:00:00.000000","2019-04-01T00:00:00.000000","2019-05-01T00:00:00.000000","2019-06-01T00:00:00.000000","2019-07-01T00:00:00.000000","2019-08-01T00:00:00.000000","2019-09-01T00:00:00.000000","2019-10-01T00:00:00.000000","2019-11-01T00:00:00.000000","2019-12-01T00:00:00.000000","2020-01-01T00:00:00.000000","2020-02-01T00:00:00.000000","2020-03-01T00:00:00.000000","2020-04-01T00:00:00.000000","2020-05-01T00:00:00.000000","2020-06-01T00:00:00.000000","2020-07-01T00:00:00.000000","2020-08-01T00:00:00.000000","2020-09-01T00:00:00.000000","2020-10-01T00:00:00.000000","2020-11-01T00:00:00.000000","2020-12-01T00:00:00.000000","2021-01-01T00:00:00.000000","2021-02-01T00:00:00.000000","2021-03-01T00:00:00.000000","2021-04-01T00:00:00.000000","2021-05-01T00:00:00.000000","2021-06-01T00:00:00.000000","2021-07-01T00:00:00.000000","2021-08-01T00:00:00.000000","2021-09-01T00:00:00.000000","2021-10-01T00:00:00.000000","2021-11-01T00:00:00.000000","2021-12-01T00:00:00.000000","2022-01-01T00:00:00.000000","2022-02-01T00:00:00.000000","2022-03-01T00:00:00.000000","2022-04-01T00:00:00.000000","2022-05-01T00:00:00.000000","2022-06-01T00:00:00.000000","2022-07-01T00:00:00.000000","2022-08-01T00:00:00.000000","2022-09-01T00:00:00.000000","2022-10-01T00:00:00.000000","2022-11-01T00:00:00.000000","2022-12-01T00:00:00.000000","2023-01-01T00:00:00.000000","2023-02-01T00:00:00.000000","2023-03-01T00:00:00.000000","2023-04-01T00:00:00.000000","2023-05-01T00:00:00.000000","2023-06-01T00:00:00.000000","2023-07-01T00:00:00.000000","2023-08-01T00:00:00.000000","2023-09-01T00:00:00.000000","2023-10-01T00:00:00.000000","2023-11-01T00:00:00.000000","2023-12-01T00:00:00.000000","2024-01-01T00:00:00.000000","2024-02-01T00:00:00.000000","2024-03-01T00:00:00.000000","2024-04-01T00:00:00.000000","2024-05-01T00:00:00.000000","2024-06-01T00:00:00.000000","2024-07-01T00:00:00.000000","2024-08-01T00:00:00.000000","2024-09-01T00:00:00.000000","2024-10-01T00:00:00.000000","2024-11-01T00:00:00.000000","2024-12-01T00:00:00.000000","2025-01-01T00:00:00.000000","2025-02-01T00:00:00.000000","2025-03-01T00:00:00.000000","2025-04-01T00:00:00.000000","2025-05-01T00:00:00.000000","2025-06-01T00:00:00.000000","2025-07-01T00:00:00.000000","2025-08-01T00:00:00.000000","2025-09-01T00:00:00.000000","2025-10-01T00:00:00.000000","2025-11-01T00:00:00.000000","2025-12-01T00:00:00.000000","2026-01-01T00:00:00.000000","2026-02-01T00:00:00.000000","2026-03-01T00:00:00.000000","2026-04-01T00:00:00.000000","2026-05-01T00:00:00.000000"],"y":{"dtype":"f8","bdata":"mpmZmZmZ\u002fT\u002fNzMzMzMwIQFyPwvUoXAVAmpmZmZmZ+T8zMzMzMzMBQOxRuB6F6wtApHA9Ctej8D\u002fsUbgehesBQBSuR+F6FApArkfhehSu\u002fz+4HoXrUbgAQIXrUbgehQNAH4XrUbgeC0D2KFyPwvUAQNejcD0K1wFA7FG4HoXrAUCPwvUoXI8OQHsUrkfheg5AzczMzMzMCEDXo3A9CtcFQIXrUbgehQdAH4XrUbgeC0AK16NwPQr\u002fP65H4XoUrglAAAAAAAAA\u002fD\u002f2KFyPwvUAQFK4HoXrUQhAPQrXo3A9+j9cj8L1KFwDQK5H4XoUrv8\u002fzczMzMzMAkA9CtejcD3qPwrXo3A9Cvc\u002fpHA9CtejAEB7FK5H4XoIQDMzMzMzMwNAAAAAAAAABEBI4XoUrkcHQIXrUbgehf8\u002fXI\u002fC9ShcBUApXI\u002fC9SgAQFyPwvUoXPc\u002fKVyPwvUoAkC4HoXrUbgGQJqZmZmZmQVA7FG4HoXrA0CF61G4HoUPQAAAAAAAAAZAuB6F61G4CEC4HoXrUbgOQIXrUbgehfs\u002fFK5H4XoU\u002fj9mZmZmZmYMQClcj8L1KABAKVyPwvUoBEAfhetRuB4JQD0K16NwPQhAZmZmZmZmDEAzMzMzMzMLQB+F61G4HglAUrgehetRAEDXo3A9CtcHQIXrUbgehQVAMzMzMzMz+z\u002fNzMzMzMwKQNejcD0K1wdAPQrXo3A9BEDhehSuR+ECQHsUrkfhevw\u002f9ihcj8L1BEA9CtejcD0GQAAAAAAAAABAmpmZmZmZCUBxPQrXo3D9P65H4XoUrvM\u002f9ihcj8L1CEAUrkfhehQCQFyPwvUoXANAAAAAAAAAAECkcD0K16P4PwAAAAAAAApAuB6F61G4AEAAAAAAAAAMQNejcD0K1wdAexSuR+F6AkCamZmZmZn9P3sUrkfhegBAUrgehetR\u002fD8AAAAAAAAOQM3MzMzMzARAhetRuB6FCUDXo3A9Ctf7P+F6FK5H4QRArkfhehSuCUBmZmZmZmYCQPYoXI\u002fC9QhAmpmZmZmZ\u002fT\u002fhehSuR+H6P9ejcD0K1wVAKVyPwvUoAkAfhetRuB4HQPYoXI\u002fC9fQ\u002fcT0K16NwB0A9CtejcD0QQOxRuB6F6wNAKVyPwvUoBEDhehSuR+EEQBSuR+F6FPY\u002fFK5H4XoUBkCkcD0K16P4P+xRuB6F6wFAAAAAAAAACkB7FK5H4XoAQA=="},"type":"scatter"},{"line":{"dash":"dash","width":3},"mode":"lines","name":"Expectativa inflaci\u00f3n 12m","x":["2017-01-01T00:00:00.000000","2017-02-01T00:00:00.000000","2017-03-01T00:00:00.000000","2017-04-01T00:00:00.000000","2017-05-01T00:00:00.000000","2017-06-01T00:00:00.000000","2017-07-01T00:00:00.000000","2017-08-01T00:00:00.000000","2017-09-01T00:00:00.000000","2017-10-01T00:00:00.000000","2017-11-01T00:00:00.000000","2017-12-01T00:00:00.000000","2018-01-01T00:00:00.000000","2018-02-01T00:00:00.000000","2018-03-01T00:00:00.000000","2018-04-01T00:00:00.000000","2018-05-01T00:00:00.000000","2018-06-01T00:00:00.000000","2018-07-01T00:00:00.000000","2018-08-01T00:00:00.000000","2018-09-01T00:00:00.000000","2018-10-01T00:00:00.000000","2018-11-01T00:00:00.000000","2018-12-01T00:00:00.000000","2019-01-01T00:00:00.000000","2019-02-01T00:00:00.000000","2019-03-01T00:00:00.000000","2019-04-01T00:00:00.000000","2019-05-01T00:00:00.000000","2019-06-01T00:00:00.000000","2019-07-01T00:00:00.000000","2019-08-01T00:00:00.000000","2019-09-01T00:00:00.000000","2019-10-01T00:00:00.000000","2019-11-01T00:00:00.000000","2019-12-01T00:00:00.000000","2020-01-01T00:00:00.000000","2020-02-01T00:00:00.000000","2020-03-01T00:00:00.000000","2020-04-01T00:00:00.000000","2020-05-01T00:00:00.000000","2020-06-01T00:00:00.000000","2020-07-01T00:00:00.000000","2020-08-01T00:00:00.000000","2020-09-01T00:00:00.000000","2020-10-01T00:00:00.000000","2020-11-01T00:00:00.000000","2020-12-01T00:00:00.000000","2021-01-01T00:00:00.000000","2021-02-01T00:00:00.000000","2021-03-01T00:00:00.000000","2021-04-01T00:00:00.000000","2021-05-01T00:00:00.000000","2021-06-01T00:00:00.000000","2021-07-01T00:00:00.000000","2021-08-01T00:00:00.000000","2021-09-01T00:00:00.000000","2021-10-01T00:00:00.000000","2021-11-01T00:00:00.000000","2021-12-01T00:00:00.000000","2022-01-01T00:00:00.000000","2022-02-01T00:00:00.000000","2022-03-01T00:00:00.000000","2022-04-01T00:00:00.000000","2022-05-01T00:00:00.000000","2022-06-01T00:00:00.000000","2022-07-01T00:00:00.000000","2022-08-01T00:00:00.000000","2022-09-01T00:00:00.000000","2022-10-01T00:00:00.000000","2022-11-01T00:00:00.000000","2022-12-01T00:00:00.000000","2023-01-01T00:00:00.000000","2023-02-01T00:00:00.000000","2023-03-01T00:00:00.000000","2023-04-01T00:00:00.000000","2023-05-01T00:00:00.000000","2023-06-01T00:00:00.000000","2023-07-01T00:00:00.000000","2023-08-01T00:00:00.000000","2023-09-01T00:00:00.000000","2023-10-01T00:00:00.000000","2023-11-01T00:00:00.000000","2023-12-01T00:00:00.000000","2024-01-01T00:00:00.000000","2024-02-01T00:00:00.000000","2024-03-01T00:00:00.000000","2024-04-01T00:00:00.000000","2024-05-01T00:00:00.000000","2024-06-01T00:00:00.000000","2024-07-01T00:00:00.000000","2024-08-01T00:00:00.000000","2024-09-01T00:00:00.000000","2024-10-01T00:00:00.000000","2024-11-01T00:00:00.000000","2024-12-01T00:00:00.000000","2025-01-01T00:00:00.000000","2025-02-01T00:00:00.000000","2025-03-01T00:00:00.000000","2025-04-01T00:00:00.000000","2025-05-01T00:00:00.000000","2025-06-01T00:00:00.000000","2025-07-01T00:00:00.000000","2025-08-01T00:00:00.000000","2025-09-01T00:00:00.000000","2025-10-01T00:00:00.000000","2025-11-01T00:00:00.000000","2025-12-01T00:00:00.000000","2026-01-01T00:00:00.000000","2026-02-01T00:00:00.000000","2026-03-01T00:00:00.000000","2026-04-01T00:00:00.000000","2026-05-01T00:00:00.000000"],"y":{"dtype":"f8","bdata":"zczMzMzMBEB7FK5H4XoGQBSuR+F6FARAmpmZmZmZ\u002fT8pXI\u002fC9SgCQHE9CtejcAlAcT0K16Nw+T9SuB6F61ECQHE9CtejcAFAmpmZmZmZA0CamZmZmZkFQFK4HoXrUQhAUrgehetRAkDD9Shcj8IFQM3MzMzMzARAuB6F61G4BEBcj8L1KFwBQAAAAAAAAABAXI\u002fC9Shc\u002fz\u002fNzMzMzMwAQD0K16NwPQRAmpmZmZmZBUA9CtejcD0EQHE9CtejcAFA9ihcj8L1CEAUrkfhehQIQBSuR+F6FAJAj8L1KFyPAECamZmZmZkDQEjhehSuRwdAPQrXo3A9BED2KFyPwvUEQI\u002fC9ShcjwJApHA9CtejBEApXI\u002fC9SgIQGZmZmZmZgJArkfhehSuA0AAAAAAAAAEQBSuR+F6FARAcT0K16Nw\u002fT9mZmZmZmb6P9ejcD0K1\u002f8\u002fw\u002fUoXI\u002fCA0D2KFyPwvUEQIXrUbgehQFAmpmZmZmZB0C4HoXrUbgCQEjhehSuRwNAj8L1KFyPAkCamZmZmZkDQHE9CtejcAVAXI\u002fC9ShcBUBSuB6F61EAQBSuR+F6FAhAXI\u002fC9Shc\u002fz9xPQrXo3ADQFK4HoXrUQJArkfhehSu\u002fz\u002f2KFyPwvUCQM3MzMzMzABAcT0K16NwA0B7FK5H4XoEQOxRuB6F6wdAKVyPwvUoBEBI4XoUrkcBQOxRuB6F6wFArkfhehSuA0CF61G4HoUDQNejcD0K1wdArkfhehSuB0AUrkfhehQCQHE9CtejcAFAFK5H4XoU9j9xPQrXo3ABQBSuR+F6FABAFK5H4XoUAkB7FK5H4XoEQMP1KFyPwgNAH4XrUbgeA0DXo3A9CtcDQM3MzMzMzAJA16NwPQrXA0DD9Shcj8LxP1K4HoXrUQJA4XoUrkfhAkAUrkfhehQCQHsUrkfhegJAcT0K16NwBUBI4XoUrkcBQD0K16NwPQpAcT0K16NwBUAzMzMzMzMDQI\u002fC9ShcjwJA9ihcj8L1AkA9CtejcD0AQOF6FK5H4QJAFK5H4XoUBEAK16NwPQoFQArXo3A9CgVAUrgehetRAkBI4XoUrkf9PwrXo3A9CgFAUrgehetRCEAUrkfhehQGQGZmZmZmZgRAzczMzMzMAEAzMzMzMzMDQGZmZmZmZv4\u002fcT0K16NwAUBmZmZmZmYCQBSuR+F6FAJAPQrXo3A9BkBI4XoUrkf9Pw=="},"type":"scatter"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"margin":{"l":40,"r":30,"t":60,"b":40},"legend":{"orientation":"h","y":-0.2},"title":{"text":"Inflaci\u00f3n observada y expectativa de inflaci\u00f3n"},"height":420},                        {"responsive": true}                    )                };            </script>        </div>
+        </div>
+
+        <div class="section">
+            <h2>Expectativas macroeconómicas</h2>
+            <p class="description">
+                Evolución mensual de las principales variables de expectativas incluidas en la base simulada.
+            </p>
+            <div>                            <div id="fb8867fa-599e-4427-a2de-7e22fe729e1e" class="plotly-graph-div" style="height:420px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("fb8867fa-599e-4427-a2de-7e22fe729e1e")) {                    Plotly.newPlot(                        "fb8867fa-599e-4427-a2de-7e22fe729e1e",                        [{"hovertemplate":"variable=Expectativa PBI\u003cbr\u003efecha=%{x}\u003cbr\u003evalor=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Expectativa PBI","line":{"color":"#636efa","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"Expectativa PBI","orientation":"v","showlegend":true,"x":["2017-01-01T00:00:00.000000","2017-02-01T00:00:00.000000","2017-03-01T00:00:00.000000","2017-04-01T00:00:00.000000","2017-05-01T00:00:00.000000","2017-06-01T00:00:00.000000","2017-07-01T00:00:00.000000","2017-08-01T00:00:00.000000","2017-09-01T00:00:00.000000","2017-10-01T00:00:00.000000","2017-11-01T00:00:00.000000","2017-12-01T00:00:00.000000","2018-01-01T00:00:00.000000","2018-02-01T00:00:00.000000","2018-03-01T00:00:00.000000","2018-04-01T00:00:00.000000","2018-05-01T00:00:00.000000","2018-06-01T00:00:00.000000","2018-07-01T00:00:00.000000","2018-08-01T00:00:00.000000","2018-09-01T00:00:00.000000","2018-10-01T00:00:00.000000","2018-11-01T00:00:00.000000","2018-12-01T00:00:00.000000","2019-01-01T00:00:00.000000","2019-02-01T00:00:00.000000","2019-03-01T00:00:00.000000","2019-04-01T00:00:00.000000","2019-05-01T00:00:00.000000","2019-06-01T00:00:00.000000","2019-07-01T00:00:00.000000","2019-08-01T00:00:00.000000","2019-09-01T00:00:00.000000","2019-10-01T00:00:00.000000","2019-11-01T00:00:00.000000","2019-12-01T00:00:00.000000","2020-01-01T00:00:00.000000","2020-02-01T00:00:00.000000","2020-03-01T00:00:00.000000","2020-04-01T00:00:00.000000","2020-05-01T00:00:00.000000","2020-06-01T00:00:00.000000","2020-07-01T00:00:00.000000","2020-08-01T00:00:00.000000","2020-09-01T00:00:00.000000","2020-10-01T00:00:00.000000","2020-11-01T00:00:00.000000","2020-12-01T00:00:00.000000","2021-01-01T00:00:00.000000","2021-02-01T00:00:00.000000","2021-03-01T00:00:00.000000","2021-04-01T00:00:00.000000","2021-05-01T00:00:00.000000","2021-06-01T00:00:00.000000","2021-07-01T00:00:00.000000","2021-08-01T00:00:00.000000","2021-09-01T00:00:00.000000","2021-10-01T00:00:00.000000","2021-11-01T00:00:00.000000","2021-12-01T00:00:00.000000","2022-01-01T00:00:00.000000","2022-02-01T00:00:00.000000","2022-03-01T00:00:00.000000","2022-04-01T00:00:00.000000","2022-05-01T00:00:00.000000","2022-06-01T00:00:00.000000","2022-07-01T00:00:00.000000","2022-08-01T00:00:00.000000","2022-09-01T00:00:00.000000","2022-10-01T00:00:00.000000","2022-11-01T00:00:00.000000","2022-12-01T00:00:00.000000","2023-01-01T00:00:00.000000","2023-02-01T00:00:00.000000","2023-03-01T00:00:00.000000","2023-04-01T00:00:00.000000","2023-05-01T00:00:00.000000","2023-06-01T00:00:00.000000","2023-07-01T00:00:00.000000","2023-08-01T00:00:00.000000","2023-09-01T00:00:00.000000","2023-10-01T00:00:00.000000","2023-11-01T00:00:00.000000","2023-12-01T00:00:00.000000","2024-01-01T00:00:00.000000","2024-02-01T00:00:00.000000","2024-03-01T00:00:00.000000","2024-04-01T00:00:00.000000","2024-05-01T00:00:00.000000","2024-06-01T00:00:00.000000","2024-07-01T00:00:00.000000","2024-08-01T00:00:00.000000","2024-09-01T00:00:00.000000","2024-10-01T00:00:00.000000","2024-11-01T00:00:00.000000","2024-12-01T00:00:00.000000","2025-01-01T00:00:00.000000","2025-02-01T00:00:00.000000","2025-03-01T00:00:00.000000","2025-04-01T00:00:00.000000","2025-05-01T00:00:00.000000","2025-06-01T00:00:00.000000","2025-07-01T00:00:00.000000","2025-08-01T00:00:00.000000","2025-09-01T00:00:00.000000","2025-10-01T00:00:00.000000","2025-11-01T00:00:00.000000","2025-12-01T00:00:00.000000","2026-01-01T00:00:00.000000","2026-02-01T00:00:00.000000","2026-03-01T00:00:00.000000","2026-04-01T00:00:00.000000","2026-05-01T00:00:00.000000"],"xaxis":"x","y":{"dtype":"f8","bdata":"CtejcD0KAUAUrkfhehT6Pylcj8L1KPw\u002f9ihcj8L1CEBmZmZmZmb2PwAAAAAAAA5AAAAAAAAABkCPwvUoXI8IQI\u002fC9ShcjwpAj8L1KFyPBEAfhetRuB4QQHsUrkfhegZAuB6F61G4DEBmZmZmZmYGQFK4HoXrUQpAPQrXo3A9CkAAAAAAAAAKQD0K16NwPQBAhetRuB6FC0BxPQrXo3AFQArXo3A9Cg1AMzMzMzMz6z97FK5H4Xr4P+F6FK5H4QpAcT0K16NwE0C4HoXrUbgOQI\u002fC9ShcjwJA9ihcj8L19D\u002fsUbgehesNQFyPwvUoXAdAuB6F61G4DED2KFyPwvUIQD0K16NwPQhA16NwPQrXF0DsUbgehesHQLgehetRuAZACtejcD0KB0Bcj8L1KFwDQOxRuB6F6w9AMzMzMzMzBUAfhetRuB4NQD0K16NwPQpA4XoUrkfhEEBcj8L1KFwLQKRwPQrXo\u002fw\u002fuB6F61G4+j+kcD0K16MRQB+F61G4HgNA4XoUrkfh+j+kcD0K16MCQArXo3A9ChFASOF6FK5H+T8K16NwPQoBQKRwPQrXowJAAAAAAAAA\u002fD8fhetRuB79P65H4XoUrvc\u002fUrgehetRBEAzMzMzMzMFQI\u002fC9ShcjwJAmpmZmZmZ9T8AAAAAAAARQLgehetRuPo\u002fPQrXo3A9CkDhehSuR+H+P1yPwvUoXA1ArkfhehSuD0D2KFyPwvUAQEjhehSuR\u002fE\u002fmpmZmZmZDUCF61G4HoUTQFyPwvUoXAtASOF6FK5HCUCPwvUoXI8OQClcj8L1KA5AXI\u002fC9ShcAUC4HoXrUbgCQOF6FK5H4QxA4XoUrkfhBkBI4XoUrkcRQGZmZmZmZgJAAAAAAAAADkC4HoXrUbgKQPYoXI\u002fC9QZAuB6F61G4EEBxPQrXo3ANQAAAAAAAAABAH4XrUbgeDUB7FK5H4XoRQPYoXI\u002fC9QZAAAAAAAAABkCkcD0K16MCQOxRuB6F6wdAhetRuB6FDUBxPQrXo3ABQGZmZmZmZvo\u002f9ihcj8L1BEDsUbgehev5Pylcj8L1KAxAj8L1KFyPBEDXo3A9CtfzPzMzMzMzMwVAexSuR+F6BkCamZmZmZkLQM3MzMzMzAZAexSuR+F6E0DXo3A9CtcDQIXrUbgehQdAMzMzMzMzB0DD9Shcj8IFQB+F61G4HglAUrgehetRDEBcj8L1KFwRQA=="},"yaxis":"y","type":"scatter"},{"hovertemplate":"variable=Expectativa tipo de cambio\u003cbr\u003efecha=%{x}\u003cbr\u003evalor=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Expectativa tipo de cambio","line":{"color":"#EF553B","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"Expectativa tipo de cambio","orientation":"v","showlegend":true,"x":["2017-01-01T00:00:00.000000","2017-02-01T00:00:00.000000","2017-03-01T00:00:00.000000","2017-04-01T00:00:00.000000","2017-05-01T00:00:00.000000","2017-06-01T00:00:00.000000","2017-07-01T00:00:00.000000","2017-08-01T00:00:00.000000","2017-09-01T00:00:00.000000","2017-10-01T00:00:00.000000","2017-11-01T00:00:00.000000","2017-12-01T00:00:00.000000","2018-01-01T00:00:00.000000","2018-02-01T00:00:00.000000","2018-03-01T00:00:00.000000","2018-04-01T00:00:00.000000","2018-05-01T00:00:00.000000","2018-06-01T00:00:00.000000","2018-07-01T00:00:00.000000","2018-08-01T00:00:00.000000","2018-09-01T00:00:00.000000","2018-10-01T00:00:00.000000","2018-11-01T00:00:00.000000","2018-12-01T00:00:00.000000","2019-01-01T00:00:00.000000","2019-02-01T00:00:00.000000","2019-03-01T00:00:00.000000","2019-04-01T00:00:00.000000","2019-05-01T00:00:00.000000","2019-06-01T00:00:00.000000","2019-07-01T00:00:00.000000","2019-08-01T00:00:00.000000","2019-09-01T00:00:00.000000","2019-10-01T00:00:00.000000","2019-11-01T00:00:00.000000","2019-12-01T00:00:00.000000","2020-01-01T00:00:00.000000","2020-02-01T00:00:00.000000","2020-03-01T00:00:00.000000","2020-04-01T00:00:00.000000","2020-05-01T00:00:00.000000","2020-06-01T00:00:00.000000","2020-07-01T00:00:00.000000","2020-08-01T00:00:00.000000","2020-09-01T00:00:00.000000","2020-10-01T00:00:00.000000","2020-11-01T00:00:00.000000","2020-12-01T00:00:00.000000","2021-01-01T00:00:00.000000","2021-02-01T00:00:00.000000","2021-03-01T00:00:00.000000","2021-04-01T00:00:00.000000","2021-05-01T00:00:00.000000","2021-06-01T00:00:00.000000","2021-07-01T00:00:00.000000","2021-08-01T00:00:00.000000","2021-09-01T00:00:00.000000","2021-10-01T00:00:00.000000","2021-11-01T00:00:00.000000","2021-12-01T00:00:00.000000","2022-01-01T00:00:00.000000","2022-02-01T00:00:00.000000","2022-03-01T00:00:00.000000","2022-04-01T00:00:00.000000","2022-05-01T00:00:00.000000","2022-06-01T00:00:00.000000","2022-07-01T00:00:00.000000","2022-08-01T00:00:00.000000","2022-09-01T00:00:00.000000","2022-10-01T00:00:00.000000","2022-11-01T00:00:00.000000","2022-12-01T00:00:00.000000","2023-01-01T00:00:00.000000","2023-02-01T00:00:00.000000","2023-03-01T00:00:00.000000","2023-04-01T00:00:00.000000","2023-05-01T00:00:00.000000","2023-06-01T00:00:00.000000","2023-07-01T00:00:00.000000","2023-08-01T00:00:00.000000","2023-09-01T00:00:00.000000","2023-10-01T00:00:00.000000","2023-11-01T00:00:00.000000","2023-12-01T00:00:00.000000","2024-01-01T00:00:00.000000","2024-02-01T00:00:00.000000","2024-03-01T00:00:00.000000","2024-04-01T00:00:00.000000","2024-05-01T00:00:00.000000","2024-06-01T00:00:00.000000","2024-07-01T00:00:00.000000","2024-08-01T00:00:00.000000","2024-09-01T00:00:00.000000","2024-10-01T00:00:00.000000","2024-11-01T00:00:00.000000","2024-12-01T00:00:00.000000","2025-01-01T00:00:00.000000","2025-02-01T00:00:00.000000","2025-03-01T00:00:00.000000","2025-04-01T00:00:00.000000","2025-05-01T00:00:00.000000","2025-06-01T00:00:00.000000","2025-07-01T00:00:00.000000","2025-08-01T00:00:00.000000","2025-09-01T00:00:00.000000","2025-10-01T00:00:00.000000","2025-11-01T00:00:00.000000","2025-12-01T00:00:00.000000","2026-01-01T00:00:00.000000","2026-02-01T00:00:00.000000","2026-03-01T00:00:00.000000","2026-04-01T00:00:00.000000","2026-05-01T00:00:00.000000"],"xaxis":"x","y":{"dtype":"f8","bdata":"4XoUrkfhCkD2KFyPwvUMQB+F61G4Hg1A16NwPQrXD0BI4XoUrkcNQD0K16NwPQpAKVyPwvUoDkDsUbgehesNQFK4HoXrUQ5A7FG4HoXrC0C4HoXrUbgQQFyPwvUoXA1AmpmZmZmZDUApXI\u002fC9SgMQClcj8L1KAxAhetRuB6FC0AzMzMzMzMNQBSuR+F6FAxACtejcD0KEUA9CtejcD0KQMP1KFyPwgtAMzMzMzMzDUBcj8L1KFwPQDMzMzMzMw1AXI\u002fC9ShcD0AAAAAAAAAMQBSuR+F6FA5Aw\u002fUoXI\u002fCEEAUrkfhehQMQM3MzMzMzA5AZmZmZmZmDkCF61G4HoUJQM3MzMzMzAxAH4XrUbgeEEA9CtejcD0OQJqZmZmZmQtAXI\u002fC9ShcD0AK16NwPQoNQLgehetRuA5AuB6F61G4DkDD9Shcj8ILQJqZmZmZmQ9AAAAAAAAADEBcj8L1KFwLQD0K16NwPQxASOF6FK5HDUA9CtejcD0OQHsUrkfhegxAhetRuB6FD0B7FK5H4XoOQKRwPQrXowxAw\u002fUoXI\u002fCD0ApXI\u002fC9SgQQNejcD0K1w1AmpmZmZmZDUB7FK5H4XoKQDMzMzMzMw1AcT0K16NwDUB7FK5H4XoOQK5H4XoUrg1AexSuR+F6DkCF61G4HoUQQPYoXI\u002fC9QxACtejcD0KDUBcj8L1KFwLQAAAAAAAAA5A7FG4HoXrD0B7FK5H4XoKQKRwPQrXowxAFK5H4XoUDkCuR+F6FK4PQM3MzMzMzA5ApHA9CtejDkCF61G4HoUNQPYoXI\u002fC9Q5AAAAAAAAAEECPwvUoXI8KQHE9CtejcA9A16NwPQrXDUD2KFyPwvUMQB+F61G4HglAMzMzMzMzC0CuR+F6FK4QQKRwPQrXowxA16NwPQrXC0AfhetRuB4NQHsUrkfhegxAPQrXo3A9DkCF61G4HoUQQM3MzMzMzAxAUrgehetRDkCuR+F6FK4LQIXrUbgehRBAZmZmZmZmDkDXo3A9CtcLQNejcD0K1w9AMzMzMzMzEEBSuB6F61EOQLgehetRuApAzczMzMzMEECkcD0K16MOQClcj8L1KBBA4XoUrkfhDEAzMzMzMzMNQD0K16NwPQ5AH4XrUbgeEEBSuB6F61EOQIXrUbgehQtAj8L1KFyPDkCkcD0K16MQQClcj8L1KA5APQrXo3A9DkBxPQrXo3ALQA=="},"yaxis":"y","type":"scatter"},{"hovertemplate":"variable=Tasa de referencia\u003cbr\u003efecha=%{x}\u003cbr\u003evalor=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Tasa de referencia","line":{"color":"#00cc96","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"Tasa de referencia","orientation":"v","showlegend":true,"x":["2017-01-01T00:00:00.000000","2017-02-01T00:00:00.000000","2017-03-01T00:00:00.000000","2017-04-01T00:00:00.000000","2017-05-01T00:00:00.000000","2017-06-01T00:00:00.000000","2017-07-01T00:00:00.000000","2017-08-01T00:00:00.000000","2017-09-01T00:00:00.000000","2017-10-01T00:00:00.000000","2017-11-01T00:00:00.000000","2017-12-01T00:00:00.000000","2018-01-01T00:00:00.000000","2018-02-01T00:00:00.000000","2018-03-01T00:00:00.000000","2018-04-01T00:00:00.000000","2018-05-01T00:00:00.000000","2018-06-01T00:00:00.000000","2018-07-01T00:00:00.000000","2018-08-01T00:00:00.000000","2018-09-01T00:00:00.000000","2018-10-01T00:00:00.000000","2018-11-01T00:00:00.000000","2018-12-01T00:00:00.000000","2019-01-01T00:00:00.000000","2019-02-01T00:00:00.000000","2019-03-01T00:00:00.000000","2019-04-01T00:00:00.000000","2019-05-01T00:00:00.000000","2019-06-01T00:00:00.000000","2019-07-01T00:00:00.000000","2019-08-01T00:00:00.000000","2019-09-01T00:00:00.000000","2019-10-01T00:00:00.000000","2019-11-01T00:00:00.000000","2019-12-01T00:00:00.000000","2020-01-01T00:00:00.000000","2020-02-01T00:00:00.000000","2020-03-01T00:00:00.000000","2020-04-01T00:00:00.000000","2020-05-01T00:00:00.000000","2020-06-01T00:00:00.000000","2020-07-01T00:00:00.000000","2020-08-01T00:00:00.000000","2020-09-01T00:00:00.000000","2020-10-01T00:00:00.000000","2020-11-01T00:00:00.000000","2020-12-01T00:00:00.000000","2021-01-01T00:00:00.000000","2021-02-01T00:00:00.000000","2021-03-01T00:00:00.000000","2021-04-01T00:00:00.000000","2021-05-01T00:00:00.000000","2021-06-01T00:00:00.000000","2021-07-01T00:00:00.000000","2021-08-01T00:00:00.000000","2021-09-01T00:00:00.000000","2021-10-01T00:00:00.000000","2021-11-01T00:00:00.000000","2021-12-01T00:00:00.000000","2022-01-01T00:00:00.000000","2022-02-01T00:00:00.000000","2022-03-01T00:00:00.000000","2022-04-01T00:00:00.000000","2022-05-01T00:00:00.000000","2022-06-01T00:00:00.000000","2022-07-01T00:00:00.000000","2022-08-01T00:00:00.000000","2022-09-01T00:00:00.000000","2022-10-01T00:00:00.000000","2022-11-01T00:00:00.000000","2022-12-01T00:00:00.000000","2023-01-01T00:00:00.000000","2023-02-01T00:00:00.000000","2023-03-01T00:00:00.000000","2023-04-01T00:00:00.000000","2023-05-01T00:00:00.000000","2023-06-01T00:00:00.000000","2023-07-01T00:00:00.000000","2023-08-01T00:00:00.000000","2023-09-01T00:00:00.000000","2023-10-01T00:00:00.000000","2023-11-01T00:00:00.000000","2023-12-01T00:00:00.000000","2024-01-01T00:00:00.000000","2024-02-01T00:00:00.000000","2024-03-01T00:00:00.000000","2024-04-01T00:00:00.000000","2024-05-01T00:00:00.000000","2024-06-01T00:00:00.000000","2024-07-01T00:00:00.000000","2024-08-01T00:00:00.000000","2024-09-01T00:00:00.000000","2024-10-01T00:00:00.000000","2024-11-01T00:00:00.000000","2024-12-01T00:00:00.000000","2025-01-01T00:00:00.000000","2025-02-01T00:00:00.000000","2025-03-01T00:00:00.000000","2025-04-01T00:00:00.000000","2025-05-01T00:00:00.000000","2025-06-01T00:00:00.000000","2025-07-01T00:00:00.000000","2025-08-01T00:00:00.000000","2025-09-01T00:00:00.000000","2025-10-01T00:00:00.000000","2025-11-01T00:00:00.000000","2025-12-01T00:00:00.000000","2026-01-01T00:00:00.000000","2026-02-01T00:00:00.000000","2026-03-01T00:00:00.000000","2026-04-01T00:00:00.000000","2026-05-01T00:00:00.000000"],"xaxis":"x","y":{"dtype":"f8","bdata":"ZmZmZmZm\u002fj9SuB6F61EIQBSuR+F6FAxApHA9CtejEEAAAAAAAAARQJqZmZmZmRlAXI\u002fC9ShcEEBmZmZmZmYWQIXrUbgehQ9ArkfhehSuGEAK16NwPQrzP83MzMzMzAhA4XoUrkfhFUDsUbgehesNQJqZmZmZmRVAUrgehetREkCuR+F6FK4VQK5H4XoUrhNACtejcD0KFED2KFyPwvUYQOxRuB6F6xVA9ihcj8L1FUAfhetRuB4QQArXo3A9CglAFK5H4XoUCECF61G4HoUUQMP1KFyPwtU\u002fUrgehetRAEB7FK5H4XoEQArXo3A9Cg1AmpmZmZmZqT+PwvUoXI8XQJqZmZmZmRNA7FG4HoXrG0Bcj8L1KFwWQDMzMzMzMxZAhetRuB6FHUAfhetRuB4JQNejcD0K1\u002fs\u002fMzMzMzMzDUAUrkfhehQGQOF6FK5H4QxAXI\u002fC9ShcA0BmZmZmZmYTQBSuR+F6FBNArkfhehSuD0DhehSuR+ERQFK4HoXrUQ5AhetRuB6FFEBmZmZmZmYQQM3MzMzMzAxAj8L1KFyPFUCPwvUoXI8XQArXo3A9ChhAFK5H4XoUBECamZmZmZkJQDMzMzMzM\u002fc\u002fH4XrUbgeDUB7FK5H4XoSQGZmZmZmZg5AmpmZmZmZG0AfhetRuB4LQPYoXI\u002fC9QJAZmZmZmZmE0DhehSuR+EQQEjhehSuRxNA16NwPQrXEUB7FK5H4XoRQD0K16NwPeo\u002fSOF6FK5HB0DhehSuR+EIQNejcD0K1wtApHA9CtejCkB7FK5H4XoSQJqZmZmZmRNAZmZmZmZmAkAfhetRuB4UQIXrUbgehRNAzczMzMzMEkDsUbgehev9P6RwPQrXoxJAexSuR+F6EEDD9Shcj8IVQLgehetRuBpAhetRuB6FGUCuR+F6FK4QQAAAAAAAABBAzczMzMzME0CkcD0K16MCQB+F61G4Hv0\u002fUrgehetRCkBSuB6F61EXQAAAAAAAAAxAAAAAAAAAGUAK16NwPQrHv+xRuB6F6\u002fk\u002fexSuR+F6DkBSuB6F61EVQDMzMzMzMw9A4XoUrkfhDkCPwvUoXI8OQMP1KFyPwvU\u002f9ihcj8L1FkDXo3A9CtcHQIXrUbgehRZAH4XrUbgeD0BmZmZmZmYWQArXo3A9ChJAuB6F61G4DkBcj8L1KFwRQKRwPQrXo\u002fw\u002fCtejcD0KEEBI4XoUrkcaQA=="},"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"fecha"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"valor"}},"legend":{"title":{"text":"variable"},"tracegroupgap":0,"orientation":"h","y":-0.2},"title":{"text":"Evoluci\u00f3n de expectativas macroecon\u00f3micas"},"margin":{"l":40,"r":30,"t":60,"b":40},"height":420},                        {"responsive": true}                    )                };            </script>        </div>
+        </div>
+
+        <div class="section">
+            <h2>Últimos 12 registros</h2>
+            <p class="description">
+                Vista tabular de los últimos datos disponibles en la base.
+            </p>
+            <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>fecha</th>
+      <th>inflacion_12m</th>
+      <th>expectativa_inflacion_12m</th>
+      <th>expectativa_pbi</th>
+      <th>expectativa_tipo_cambio</th>
+      <th>tasa_referencia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2025-06</td>
+      <td>1.31</td>
+      <td>2.13</td>
+      <td>2.65</td>
+      <td>4.04</td>
+      <td>1.36</td>
+    </tr>
+    <tr>
+      <td>2025-07</td>
+      <td>2.93</td>
+      <td>3.04</td>
+      <td>2.81</td>
+      <td>3.61</td>
+      <td>5.74</td>
+    </tr>
+    <tr>
+      <td>2025-08</td>
+      <td>4.06</td>
+      <td>2.76</td>
+      <td>3.45</td>
+      <td>3.65</td>
+      <td>2.98</td>
+    </tr>
+    <tr>
+      <td>2025-09</td>
+      <td>2.49</td>
+      <td>2.55</td>
+      <td>2.85</td>
+      <td>3.78</td>
+      <td>5.63</td>
+    </tr>
+    <tr>
+      <td>2025-10</td>
+      <td>2.52</td>
+      <td>2.10</td>
+      <td>4.87</td>
+      <td>4.03</td>
+      <td>3.89</td>
+    </tr>
+    <tr>
+      <td>2025-11</td>
+      <td>2.61</td>
+      <td>2.40</td>
+      <td>2.48</td>
+      <td>3.79</td>
+      <td>5.60</td>
+    </tr>
+    <tr>
+      <td>2025-12</td>
+      <td>1.38</td>
+      <td>1.90</td>
+      <td>2.94</td>
+      <td>3.44</td>
+      <td>4.51</td>
+    </tr>
+    <tr>
+      <td>2026-01</td>
+      <td>2.76</td>
+      <td>2.18</td>
+      <td>2.90</td>
+      <td>3.82</td>
+      <td>3.84</td>
+    </tr>
+    <tr>
+      <td>2026-02</td>
+      <td>1.54</td>
+      <td>2.30</td>
+      <td>2.72</td>
+      <td>4.16</td>
+      <td>4.34</td>
+    </tr>
+    <tr>
+      <td>2026-03</td>
+      <td>2.24</td>
+      <td>2.26</td>
+      <td>3.14</td>
+      <td>3.77</td>
+      <td>1.79</td>
+    </tr>
+    <tr>
+      <td>2026-04</td>
+      <td>3.25</td>
+      <td>2.78</td>
+      <td>3.54</td>
+      <td>3.78</td>
+      <td>4.01</td>
+    </tr>
+    <tr>
+      <td>2026-05</td>
+      <td>2.06</td>
+      <td>1.83</td>
+      <td>4.34</td>
+      <td>3.43</td>
+      <td>6.57</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Dashboard generado automáticamente con Python, pandas, pyreadstat y Plotly.
+    </div>
+
+</body>
+</html>
